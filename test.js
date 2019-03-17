@@ -1,14 +1,14 @@
 import test from 'ava';
-import m from './';
+import pDefer from '.';
 
 const fixture = Symbol('fixture');
 
 function delay(ms) {
-	const deferred = m();
+	const deferred = pDefer();
 	setTimeout(deferred.resolve, ms, fixture);
 	return deferred.promise;
 }
 
-test(async t => {
+test('main', async t => {
 	t.is(await delay(50), fixture);
 });

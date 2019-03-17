@@ -1,5 +1,6 @@
 'use strict';
-module.exports = () => {
+
+const pDefer = () => {
 	const ret = {};
 
 	ret.promise = new Promise((resolve, reject) => {
@@ -9,3 +10,6 @@ module.exports = () => {
 
 	return ret;
 };
+
+module.exports = pDefer;
+module.exports.default = pDefer;
