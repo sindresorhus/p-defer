@@ -1,14 +1,14 @@
 'use strict';
 
 const pDefer = () => {
-	const ret = {};
+	const deferred = {};
 
-	ret.promise = new Promise((resolve, reject) => {
-		ret.resolve = resolve;
-		ret.reject = reject;
+	deferred.promise = new Promise((resolve, reject) => {
+		deferred.resolve = resolve;
+		deferred.reject = reject;
 	});
 
-	return ret;
+	return deferred;
 };
 
 module.exports = pDefer;

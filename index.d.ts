@@ -22,6 +22,4 @@ export interface DeferredPromise<ValueType> {
 /**
 Create a deferred promise.
 */
-export default function pDefer<ValueType = unknown>(): DeferredPromise<
-	ValueType
->;
+export default function pDefer<ValueType = unknown>(): DeferredPromise<ValueType>;

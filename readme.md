@@ -2,13 +2,13 @@
 
 > Create a deferred promise
 
-[**Don't use this unless you know what you're doing!**](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns#the-deferred-anti-pattern) Prefer the `Promise` constructor.
+[Don't use this unless you know what you're doing.](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns#the-deferred-anti-pattern) Prefer the `Promise` constructor.
 
 
 ## Install
 
 ```
-$ npm install --save p-defer
+$ npm install p-defer
 ```
 
 
