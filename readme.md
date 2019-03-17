@@ -23,8 +23,10 @@ function delay(ms) {
 	return deferred.promise;
 }
 
-delay(100).then(console.log);
-//=> '🦄'
+(async () => {
+	console.log(await delay(100));
+	//=> '🦄'
+})();
 ```
 
 *The above is just an example. Use [`delay`](https://github.com/sindresorhus/delay) if you need to delay a promise.*
