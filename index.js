@@ -12,4 +12,5 @@ const pDefer = () => {
 };
 
 module.exports = pDefer;
+// TODO: Remove this for the next major release
 module.exports.default = pDefer;

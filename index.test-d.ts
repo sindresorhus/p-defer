@@ -1,5 +1,6 @@
-import {expectType} from 'tsd-check';
-import pDefer, {DeferredPromise} from '.';
+import {expectType} from 'tsd';
+import pDefer = require('.');
+import {DeferredPromise} from '.';
 
 expectType<DeferredPromise<unknown>>(pDefer());
 expectType<DeferredPromise<string>>(pDefer<string>());
