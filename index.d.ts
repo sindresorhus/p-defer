@@ -41,10 +41,10 @@ declare const pDefer: {
 	})();
 	```
 	*/
-	<ValueType = unknown>(): pDefer.DeferredPromise<ValueType>;
+	<ValueType>(): pDefer.DeferredPromise<ValueType>;
 
 	// TODO: Remove this for the next major release, refactor the whole definition to:
-	// declare function pDefer<ValueType = unknown>(): pDefer.DeferredPromise<
+	// declare function pDefer<ValueType>(): pDefer.DeferredPromise<
 	// 	ValueType
 	// >;
 	// export = pDefer;
