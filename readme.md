@@ -36,15 +36,10 @@ function delay(ms) {
 
 ### pDefer()
 
-Returns an `Object` with a `promise` property and functions to `resolve()` and `reject()`.
+Returns an `object` with a `promise` property and functions to `resolve()` and `reject()`.
 
 
 ## Related
 
 - [p-lazy](https://github.com/sindresorhus/p-lazy) - Create a lazy promise that defers execution until `.then()` or `.catch()` is called
 - [More…](https://github.com/sindresorhus/promise-fun)
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

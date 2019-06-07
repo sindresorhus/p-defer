@@ -10,7 +10,7 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -29,12 +29,11 @@
 		"later",
 		"async",
 		"await",
-		"promises",
-		"bluebird"
+		"promises"
 	],
 	"devDependencies": {
 		"ava": "^2.0.0",
-		"tsd": "^0.7.2",
+		"tsd": "^0.7.3",
 		"xo": "^0.24.0"
 	}
 }

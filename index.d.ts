@@ -21,34 +21,25 @@ declare namespace pDefer {
 	}
 }
 
-declare const pDefer: {
-	/**
-	Create a deferred promise.
+/**
+Create a deferred promise.
 
-	@example
-	```
-	import pDefer = require('p-defer');
+@example
+```
+import pDefer = require('p-defer');
 
-	function delay(ms) {
-		const deferred = pDefer();
-		setTimeout(deferred.resolve, ms, '🦄');
-		return deferred.promise;
-	}
+function delay(ms) {
+	const deferred = pDefer();
+	setTimeout(deferred.resolve, ms, '🦄');
+	return deferred.promise;
+}
 
-	(async () => {
-		console.log(await delay(100));
-		//=> '🦄'
-	})();
-	```
-	*/
-	<ValueType>(): pDefer.DeferredPromise<ValueType>;
-
-	// TODO: Remove this for the next major release, refactor the whole definition to:
-	// declare function pDefer<ValueType>(): pDefer.DeferredPromise<
-	// 	ValueType
-	// >;
-	// export = pDefer;
-	default: typeof pDefer;
-};
+(async () => {
+	console.log(await delay(100));
+	//=> '🦄'
+})();
+```
+*/
+declare function pDefer<ValueType>(): pDefer.DeferredPromise<ValueType>;
 
 export = pDefer;
