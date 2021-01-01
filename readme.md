@@ -1,4 +1,4 @@
-# p-defer [![Build Status](https://travis-ci.org/sindresorhus/p-defer.svg?branch=master)](https://travis-ci.org/sindresorhus/p-defer)
+# p-defer
 
 > Create a deferred promise
 
