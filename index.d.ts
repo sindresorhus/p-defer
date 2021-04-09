@@ -1,24 +1,22 @@
-declare namespace pDefer {
-	interface DeferredPromise<ValueType> {
-		/**
-		Resolves the promise with a value or the result of another promise.
+export interface DeferredPromise<ValueType> {
+	/**
+	The deferred promise.
+	*/
+	promise: Promise<ValueType>;
 
-		@param value - The value to resolve the promise with.
-		*/
-		resolve(value?: ValueType | PromiseLike<ValueType>): void;
+	/**
+	Resolves the promise with a value or the result of another promise.
 
-		/**
-		Reject the promise with a provided reason or error.
+	@param value - The value to resolve the promise with.
+	*/
+	resolve(value?: ValueType | PromiseLike<ValueType>): void;
 
-		@param reason - The reason or error to reject the promise with.
-		*/
-		reject(reason?: unknown): void;
+	/**
+	Reject the promise with a provided reason or error.
 
-		/**
-		The deferred promise.
-		*/
-		promise: Promise<ValueType>;
-	}
+	@param reason - The reason or error to reject the promise with.
+	*/
+	reject(reason?: unknown): void;
 }
 
 /**
@@ -26,20 +24,16 @@ Create a deferred promise.
 
 @example
 ```
-import pDefer = require('p-defer');
+import pDefer from 'p-defer';
 
-function delay(ms) {
+function delay(milliseconds) {
 	const deferred = pDefer();
-	setTimeout(deferred.resolve, ms, '🦄');
+	setTimeout(deferred.resolve, milliseconds, '🦄');
 	return deferred.promise;
 }
 
-(async () => {
-	console.log(await delay(100));
-	//=> '🦄'
-})();
+console.log(await delay(100));
+//=> '🦄'
 ```
 */
-declare function pDefer<ValueType>(): pDefer.DeferredPromise<ValueType>;
-
-export = pDefer;
+export default function pDefer<ValueType>(): DeferredPromise<ValueType>;

@@ -1,11 +1,11 @@
 import test from 'ava';
-import pDefer from '.';
+import pDefer from './index.js';
 
 const fixture = Symbol('fixture');
 
-function delay(ms) {
+function delay(milliseconds) {
 	const deferred = pDefer();
-	setTimeout(deferred.resolve, ms, fixture);
+	setTimeout(deferred.resolve, milliseconds, fixture);
 	return deferred.promise;
 }
 

@@ -1,6 +1,4 @@
-'use strict';
-
-const pDefer = () => {
+export default function pDefer() {
 	const deferred = {};
 
 	deferred.promise = new Promise((resolve, reject) => {
@@ -9,6 +7,4 @@ const pDefer = () => {
 	});
 
 	return deferred;
-};
-
-module.exports = pDefer;
+}

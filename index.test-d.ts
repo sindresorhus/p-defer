@@ -1,6 +1,5 @@
 import {expectType} from 'tsd';
-import pDefer = require('.');
-import {DeferredPromise} from '.';
+import pDefer, {DeferredPromise} from './index.js';
 
 expectType<DeferredPromise<unknown>>(pDefer());
 expectType<DeferredPromise<string>>(pDefer<string>());
