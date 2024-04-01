@@ -12,11 +12,14 @@
 	},
 	"type": "module",
 	"exports": "./index.js",
+	"types": "./index.d.ts",
+	"sideEffects": false,
 	"engines": {
 		"node": ">=12"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "//xo && ava && tsd",
+		"test": "ava"
 	},
 	"files": [
 		"index.js",
