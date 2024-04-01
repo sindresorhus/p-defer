@@ -1,6 +1,6 @@
 {
 	"name": "p-defer",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Create a deferred promise",
 	"license": "MIT",
 	"repository": "sindresorhus/p-defer",
@@ -18,7 +18,6 @@
 		"node": ">=12"
 	},
 	"scripts": {
-		"test": "//xo && ava && tsd",
 		"test": "ava"
 	},
 	"files": [
