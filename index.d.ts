@@ -9,14 +9,14 @@ export interface DeferredPromise<ValueType> {
 
 	@param value - The value to resolve the promise with.
 	*/
-	resolve(value?: ValueType | PromiseLike<ValueType>): void;
+	resolve(this: void, value?: ValueType | PromiseLike<ValueType>): void;
 
 	/**
 	Reject the promise with a provided reason or error.
 
 	@param reason - The reason or error to reject the promise with.
 	*/
-	reject(reason?: unknown): void;
+	reject(this: void, reason?: unknown): void;
 }
 
 /**
