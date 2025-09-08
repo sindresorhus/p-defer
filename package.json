@@ -18,6 +18,7 @@
 		"node": ">=12"
 	},
 	"scripts": {
+		"//test": "xo && ava && tsd",
 		"test": "ava"
 	},
 	"files": [

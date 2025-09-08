@@ -4,6 +4,9 @@
 
 [Don't use this unless you know what you're doing.](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns#the-deferred-anti-pattern) Prefer the `Promise` constructor.
 
+> [!TIP]
+> If you're using TypeScript 5.4+ or a JavaScript environment that supports it, consider using the native [`Promise.withResolvers()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers) instead of this package.
+
 ## Install
 
 ```sh
